@@ -33,8 +33,8 @@ LOG_DIR    = SCRIPT_DIR / "logs"
 TIMEZONE     = os.getenv("DIGEST_TIMEZONE", "EET")
 APP_URL      = os.getenv("DIGEST_APP_URL", "http://localhost:8000")
 NTFY_TOPIC   = os.getenv("NTFY_TOPIC", "")
-_vault       = os.getenv("OBSIDIAN_VAULT_PATH", "")
-OBSIDIAN_DIR = Path(_vault) / "collections" / "digests" if _vault else None
+_digests_path = os.getenv("OBSIDIAN_DIGESTS_PATH", "")
+OBSIDIAN_DIR  = Path(_digests_path) if _digests_path else None
 
 MODEL = "claude-opus-4-7"
 
