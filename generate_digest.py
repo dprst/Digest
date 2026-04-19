@@ -34,7 +34,7 @@ TIMEZONE     = os.getenv("DIGEST_TIMEZONE", "EET")
 APP_URL      = os.getenv("DIGEST_APP_URL", "http://localhost:8000")
 NTFY_TOPIC   = os.getenv("NTFY_TOPIC", "")
 _vault       = os.getenv("OBSIDIAN_VAULT_PATH", "")
-OBSIDIAN_DIR = Path(_vault) / "Дайджести" if _vault else None
+OBSIDIAN_DIR = Path(_vault) / "collections" / "digests" if _vault else None
 
 MODEL = "claude-opus-4-7"
 
